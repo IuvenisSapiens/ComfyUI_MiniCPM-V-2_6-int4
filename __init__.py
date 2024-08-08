@@ -11,7 +11,7 @@ NODE_CLASS_MAPPINGS = {
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "LoadVideo": "LoadVideo",
-    "PreViewVideo": "PreViewVideo",
+    "LoadVideo": "Load Video",
+    "PreViewVideo": "PreView Video",
     "MiniCPM_VQA": "MiniCPM VQA",
 }
