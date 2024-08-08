@@ -1,0 +1,7 @@
+torch
+torchvision
+numpy
+pillow
+huggingface_hub
+transformers
+decord
