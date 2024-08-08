@@ -12,7 +12,7 @@ The following [workflow](examples/workflow.json) shows the basic usage on queryi
 
 - Install from [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager) (search for `minicpm`)
 
-- Download or git clone this repository into the ComfyUI/custom_nodes/ directory and run:
+- Download or git clone this repository into the ComfyUI\custom_nodes\ directory and run:
 
 ```python
 pip install -r requirements.txt
@@ -20,4 +20,4 @@ pip install -r requirements.txt
 
 ## Download Models
 
-All the models will be downloaded automatically when running the workflow if they are not found in the `ComfyUI\models\prompt_generator` directory.
+All the models will be downloaded automatically when running the workflow if they are not found in the `ComfyUI\models\prompt_generator\` directory.
