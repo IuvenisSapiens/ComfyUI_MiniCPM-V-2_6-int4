@@ -10,7 +10,7 @@ The following [workflow](examples/workflow.json) shows the basic usage on queryi
 
 ## Installation
 
-- Install from ComfyUI Manager (search for `minicpm`)
+- Install from [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager) (search for `minicpm`)
 
 - Download or git clone this repository into the ComfyUI/custom_nodes/ directory and run:
 
