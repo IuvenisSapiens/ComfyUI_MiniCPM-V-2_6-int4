@@ -18,6 +18,6 @@ The following [workflow](examples/workflow.json) shows the basic usage on queryi
 pip install -r requirements.txt
 ```
 
-## Download Checkpoints
+## Download Models
 
 All the models will be downloaded automatically when running the workflow if they are not found in the `ComfyUI\models\prompt_generator` directory.
