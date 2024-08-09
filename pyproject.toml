@@ -3,7 +3,7 @@ name = "ComfyUI_MiniCPM-V-2_6-int4"
 description = "This is an implementation of [MiniCPM-V-2_6-int4](https://github.com/OpenBMB/MiniCPM-V) by [ComfyUI](https://github.com/comfyanonymous/ComfyUI), including support for text-based queries, video queries, single-image queries, and multi-image queries to generate captions or responses."
 version = "1.0.0"
 license = "LICENSE"
-dependencies = ["torch", "torchvision", "numpy", "pillow", "huggingface_hub", "transformers", "decord"]
+dependencies = ["torch", "torchvision", "numpy", "pillow", "huggingface_hub", "transformers", "decord", "bitsandbytes"]
 
 [project.urls]
 Repository = "https://github.com/IuvenisSapiens/ComfyUI_MiniCPM-V-2_6-int4"
