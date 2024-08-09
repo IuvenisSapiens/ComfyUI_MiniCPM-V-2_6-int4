@@ -3,45 +3,6 @@
   "last_link_id": 50,
   "nodes": [
     {
-      "id": 43,
-      "type": "LoadImage",
-      "pos": [
-        -376,
-        -191
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            47
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00509_.png",
-        "image"
-      ]
-    },
-    {
       "id": 45,
       "type": "LoadImage",
       "pos": [
@@ -53,7 +14,7 @@
         "1": 314
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -92,7 +53,7 @@
         "1": 314
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -119,43 +80,42 @@
       ]
     },
     {
-      "id": 6,
-      "type": "ACE_TextPreview",
+      "id": 43,
+      "type": "LoadImage",
       "pos": [
-        -20,
-        250
+        -371,
+        -192
       ],
       "size": {
-        "0": 390.9505615234375,
-        "1": 219.45504760742188
+        "0": 315,
+        "1": 314
       },
       "flags": {},
-      "order": 5,
+      "order": 2,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 49,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
           "links": null,
-          "shape": 6
+          "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "ACE_TextPreview"
+        "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "",
-        "The differences among the three images are as follows:\n\n1. In image 1, the Earth is depicted with a clear view of its continents and oceans without any additional celestial bodies in the background.\n2. Image 2 introduces a black sphere to the right side of the Earth, which could be interpreted as a moon or another planet.\n3. Finally, image 3 adds a ring system around the Earth, similar to that of Saturn, while still maintaining the presence of the black sphere seen in image 2.\n\nThese changes create a progression from a simple depiction of Earth to a more complex representation involving multiple celestial elements."
+        "ComfyUI_00509_.png",
+        "image"
       ]
     },
     {
@@ -165,10 +125,10 @@
         -26,
         -186
       ],
-      "size": {
-        "0": 405.09295654296875,
-        "1": 111.9568862915039
-      },
+      "size": [
+        399.24604354256746,
+        109.79270042585773
+      ],
       "flags": {
         "collapsed": false
       },
@@ -188,11 +148,11 @@
       "type": "MiniCPM_VQA",
       "pos": [
         -25,
-        -8
+        -27
       ],
       "size": {
         "0": 400,
-        "1": 200
+        "1": 232
       },
       "flags": {},
       "order": 4,
@@ -237,7 +197,49 @@
       "widgets_values": [
         "Compare image 1，image 2 and image 3, tell me about the differences among them.",
         "MiniCPM-V-2_6-int4",
-        0.7000000000000001
+        0.7000000000000001,
+        64,
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ACE_TextPreview",
+      "pos": [
+        -21,
+        251
+      ],
+      "size": [
+        395.6283298148197,
+        216.01457065671195
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 49,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ACE_TextPreview"
+      },
+      "widgets_values": [
+        "",
+        "Image 1 depicts the Earth as a standalone planet, while image 2 adds a small black satellite orbiting around it. In contrast, image 3 further enhances this by including a ring system around the Earth, resembling that of Saturn."
       ]
     }
   ],
@@ -279,10 +281,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7972024500000005,
+      "scale": 0.8769226950000005,
       "offset": [
-        1013.0564987351984,
-        267.7441693105136
+        895.6539167345032,
+        265.2723755243286
       ]
     }
   },

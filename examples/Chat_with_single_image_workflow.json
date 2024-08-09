@@ -1,30 +1,54 @@
 {
-  "last_node_id": 47,
-  "last_link_id": 50,
+  "last_node_id": 51,
+  "last_link_id": 59,
   "nodes": [
     {
-      "id": 43,
-      "type": "LoadImage",
+      "id": 7,
+      "type": "Note",
       "pos": [
-        -376,
-        -191
+        -28,
+        -175
       ],
       "size": {
-        "0": 315,
-        "1": 314
+        "0": 405.09295654296875,
+        "1": 111.9568862915039
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 51,
+      "type": "LoadImage",
+      "pos": [
+        -371,
+        -167
+      ],
+      "size": {
+        "0": 328.1353454589844,
+        "1": 400.7259216308594
       },
       "flags": {},
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            47
+            59
           ],
-          "shape": 3,
-          "slot_index": 0
+          "shape": 3
         },
         {
           "name": "MASK",
@@ -45,15 +69,15 @@
       "id": 6,
       "type": "ACE_TextPreview",
       "pos": [
-        -20,
-        250
+        -369,
+        288
       ],
-      "size": [
-        390.950569995862,
-        219.45504491178895
-      ],
+      "size": {
+        "0": 748.0654296875,
+        "1": 211.0476531982422
+      },
       "flags": {},
-      "order": 5,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -78,109 +102,7 @@
       },
       "widgets_values": [
         "",
-        "The image presents a stunning view of Earth from space, showcasing the planet's diverse landscapes. The curvature of the Earth is clearly visible, emphasizing its spherical shape. The colors are rich and vibrant, with the blue oceans contrasting against the green landmasses. The clouds appear as white streaks across the globe, adding depth to the scene.\n\nIn the background, there's a glimpse of space, providing context for the Earth's location in the universe. A distant star can be seen, possibly indicating the relative position of our solar system within the galaxy. The overall perspective offers a unique viewpoint, highlighting the beauty and complexity of our home planet."
-      ]
-    },
-    {
-      "id": 7,
-      "type": "Note",
-      "pos": [
-        -26,
-        -186
-      ],
-      "size": [
-        405.09294609617916,
-        111.9568879502192
-      ],
-      "flags": {
-        "collapsed": false
-      },
-      "order": 1,
-      "mode": 0,
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 45,
-      "type": "LoadImage",
-      "pos": [
-        -710,
-        22
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            48
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00532_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 47,
-      "type": "LoadImage",
-      "pos": [
-        -371,
-        159
-      ],
-      "size": [
-        315,
-        314.00000762939453
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            50
-          ],
-          "shape": 3
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00508_.png",
-        "image"
+        "The image showcases a stunning view of Earth from space, captured in high resolution. The planet is centrally positioned and appears to be illuminated by the sun's rays, which are visible on the right side of the frame. The Earth's surface is depicted with remarkable detail, revealing its diverse topography. Prominent landmasses such as North America, South America, Europe, Africa, Asia, Australia, and Antarctica are clearly visible.\n\nThe oceans surrounding these continents are shown in varying shades of blue, reflecting the vastness of our planet's water bodies. The atmosphere is rendered in white and gray tones, providing a stark contrast to the deep blues of the oceans and the greens and browns of the land. This color palette effectively highlights the natural beauty and complexity of Earth's ecosystems.\n\nThe perspective from space offers a unique vantage point, allowing us to appreciate the intricate patterns formed by the clouds that dot the sky. These cloud formations add an element of dynamism to the otherwise static depiction of the Earth.\n\nOverall, this image serves as a powerful reminder of our home planet's awe-inspiring scale and diversity. It underscores the importance of preserving and protecting our environment for future generations."
       ]
     },
     {
@@ -191,32 +113,34 @@
         -8
       ],
       "size": {
-        "0": 400,
-        "1": 200
+        "0": 402.51531982421875,
+        "1": 251.21055603027344
       },
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
           "name": "source_video_path",
           "type": "VIDEO",
-          "link": null
+          "link": null,
+          "slot_index": 0
         },
         {
           "name": "source_image_path_1st",
           "type": "IMAGE",
-          "link": 47
+          "link": 59,
+          "slot_index": 1
         },
         {
           "name": "source_image_path_2nd",
           "type": "IMAGE",
-          "link": 48
+          "link": null
         },
         {
           "name": "source_image_path_3rd",
           "type": "IMAGE",
-          "link": 50,
+          "link": null,
           "slot_index": 3
         }
       ],
@@ -235,29 +159,15 @@
         "Node name for S&R": "MiniCPM_VQA"
       },
       "widgets_values": [
-        "Please describe the given image in detail",
+        "Describe the image in detail",
         "MiniCPM-V-2_6-int4",
-        0.7
+        0.7000000000000001,
+        64,
+        2
       ]
     }
   ],
   "links": [
-    [
-      47,
-      43,
-      0,
-      46,
-      1,
-      "IMAGE"
-    ],
-    [
-      48,
-      45,
-      0,
-      46,
-      2,
-      "IMAGE"
-    ],
     [
       49,
       46,
@@ -267,11 +177,11 @@
       "STRING"
     ],
     [
-      50,
-      47,
+      59,
+      51,
       0,
       46,
-      3,
+      1,
       "IMAGE"
     ]
   ],
@@ -279,10 +189,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9646149645000014,
+      "scale": 0.8769226950000005,
       "offset": [
-        854.6518031346819,
-        277.0369671081546
+        781.9476994712928,
+        227.4124283949481
       ]
     }
   },

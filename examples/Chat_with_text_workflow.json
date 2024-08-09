@@ -6,13 +6,13 @@
       "id": 7,
       "type": "Note",
       "pos": [
-        -26,
-        -186
+        401,
+        -139
       ],
-      "size": {
-        "0": 405.09295654296875,
-        "1": 111.9568862915039
-      },
+      "size": [
+        539.9103236092111,
+        102.77279880064953
+      ],
       "flags": {
         "collapsed": false
       },
@@ -28,229 +28,18 @@
       "bgcolor": "#653"
     },
     {
-      "id": 47,
-      "type": "LoadImage",
-      "pos": [
-        -371,
-        159
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            50
-          ],
-          "shape": 3
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00508_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 45,
-      "type": "LoadImage",
-      "pos": [
-        -703,
-        158
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            48
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00532_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 43,
-      "type": "LoadImage",
-      "pos": [
-        -370,
-        -192
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            47
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00509_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 48,
-      "type": "LoadVideo",
-      "pos": [
-        -699,
-        -192
-      ],
-      "size": {
-        "0": 311.40118408203125,
-        "1": 308.80035400390625
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 4,
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            51
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadVideo"
-      },
-      "widgets_values": [
-        "AnimateDiff_00002.mp4",
-        "Video",
-        {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      ]
-    },
-    {
-      "id": 46,
-      "type": "MiniCPM_VQA",
-      "pos": [
-        -24,
-        -7
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source_video_path",
-          "type": "VIDEO",
-          "link": 51,
-          "slot_index": 0
-        },
-        {
-          "name": "source_image_path_1st",
-          "type": "IMAGE",
-          "link": 47
-        },
-        {
-          "name": "source_image_path_2nd",
-          "type": "IMAGE",
-          "link": 48
-        },
-        {
-          "name": "source_image_path_3rd",
-          "type": "IMAGE",
-          "link": 50,
-          "slot_index": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            49
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniCPM_VQA"
-      },
-      "widgets_values": [
-        "Quantum Group",
-        "MiniCPM-V-2_6-int4",
-        0.7
-      ]
-    },
-    {
       "id": 6,
       "type": "ACE_TextPreview",
       "pos": [
-        -20,
-        250
+        398,
+        5
       ],
       "size": [
-        392.91706235714025,
-        222.38359101430484
+        550.4761022725014,
+        150.3994243705667
       ],
       "flags": {},
-      "order": 6,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -275,27 +64,71 @@
       },
       "widgets_values": [
         "",
-        "A quantum group is a mathematical structure that generalizes the concept of a group in quantum mechanics. In classical group theory, a group is a set of elements with a binary operation (such as addition or multiplication) that satisfies certain properties, such as associativity and the existence of an identity element.\nIn quantum group theory, the elements of the group are typically represented by operators on a quantum system, and the binary operation is defined using the rules of quantum mechanics. One common example of a quantum group is the quantum group associated with the Lie algebra sl(2), which is used to describe the symmetries of the quantum harmonic oscillator.\nQuantum groups have many applications in physics and mathematics, including the study of integrable systems, the classification of representations of quantum groups, and the development of new mathematical tools for understanding quantum systems."
+        "A quantum group is a mathematical object that generalizes the concept of a classical group to include non-commutative structures. In classical mathematics, a group is a set with a multiplication operation and an identity element that satisfies certain properties such as associativity, existence of inverse elements, and existence of an identity element.\nIn quantum mechanics, on the other hand, the concepts of symmetry and conservation laws are more complex than in classical physics. Therefore, it is necessary to use quantum groups to describe these phenomena accurately. Quantum groups can be used to study the symmetries of quantum systems, including their conserved quantities, and they have many applications in areas such as quantum field theory, quantum statistical mechanics, and quantum information theory."
+      ]
+    },
+    {
+      "id": 46,
+      "type": "MiniCPM_VQA",
+      "pos": [
+        -23,
+        -125
+      ],
+      "size": [
+        401.3026807744791,
+        270.54357604198634
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video_path",
+          "type": "VIDEO",
+          "link": null,
+          "slot_index": 0
+        },
+        {
+          "name": "source_image_path_1st",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "source_image_path_2nd",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "source_image_path_3rd",
+          "type": "IMAGE",
+          "link": null,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_VQA"
+      },
+      "widgets_values": [
+        "Quantum Group",
+        "MiniCPM-V-2_6-int4",
+        0.7,
+        64,
+        2
       ]
     }
   ],
   "links": [
-    [
-      47,
-      43,
-      0,
-      46,
-      1,
-      "IMAGE"
-    ],
-    [
-      48,
-      45,
-      0,
-      46,
-      2,
-      "IMAGE"
-    ],
     [
       49,
       46,
@@ -303,32 +136,16 @@
       6,
       0,
       "STRING"
-    ],
-    [
-      50,
-      47,
-      0,
-      46,
-      3,
-      "IMAGE"
-    ],
-    [
-      51,
-      48,
-      0,
-      46,
-      0,
-      "VIDEO"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7972024500000006,
+      "scale": 1.283902517749502,
       "offset": [
-        930.1225825563424,
-        275.8134441293897
+        98.81032594344038,
+        235.2187914084343
       ]
     }
   },
