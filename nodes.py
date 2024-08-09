@@ -25,8 +25,10 @@ class MiniCPM_VQA:
                 "temperature": ("FLOAT", {"default": 0.7,}),
             },
             "optional": {
-                "source_image_path": ("IMAGE",),
                 "source_video_path": ("VIDEO",),
+                "source_image_path_1st": ("IMAGE",),
+                "source_image_path_2nd": ("IMAGE",),
+                "source_image_path_3rd": ("IMAGE",),
             },
         }
 
@@ -52,7 +54,7 @@ class MiniCPM_VQA:
         print('num frames:', len(frames))
         return frames
 
-    def inference(self, text, model, temperature, source_image_path=None, source_video_path=None):
+    def inference(self, text, model, temperature, source_image_path_1st=None, source_image_path_2nd=None, source_image_path_3rd=None, source_video_path=None):
         model_id = f"openbmb/{model}"
         model_checkpoint = os.path.join(folder_paths.models_dir, 'prompt_generator', os.path.basename(model_id))
 
@@ -69,11 +71,35 @@ class MiniCPM_VQA:
             if source_video_path:
                 frames = self.encode_video(source_video_path)
                 msgs = [{'role': 'user', 'content': frames + [text]}]
-            elif source_image_path is not None:
-                image = ToPILImage()(source_image_path.permute([0,3,1,2])[0]).convert("RGB")
+            elif source_image_path_1st is not None and source_image_path_2nd is not None and source_image_path_3rd is not None:
+                image1 = ToPILImage()(source_image_path_1st.permute([0,3,1,2])[0]).convert("RGB")
+                image2 = ToPILImage()(source_image_path_2nd.permute([0,3,1,2])[0]).convert("RGB")
+                image3 = ToPILImage()(source_image_path_3rd.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image1, image2, image3, text]}]
+            elif source_image_path_1st is not None and source_image_path_2nd is not None and source_image_path_3rd is None:
+                image1 = ToPILImage()(source_image_path_1st.permute([0,3,1,2])[0]).convert("RGB")
+                image2 = ToPILImage()(source_image_path_2nd.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image1, image2, text]}]
+            elif source_image_path_1st is not None and source_image_path_2nd is None and source_image_path_3rd is not None:
+                image1 = ToPILImage()(source_image_path_1st.permute([0,3,1,2])[0]).convert("RGB")
+                image3 = ToPILImage()(source_image_path_3rd.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image1, image3, text]}]
+            elif source_image_path_1st is None and source_image_path_2nd is not None and source_image_path_3rd is not None:
+                image2 = ToPILImage()(source_image_path_2nd.permute([0,3,1,2])[0]).convert("RGB")
+                image3 = ToPILImage()(source_image_path_3rd.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image2, image3, text]}]
+            elif source_image_path_1st is not None and source_image_path_2nd is None and source_image_path_3rd is None:
+                image = ToPILImage()(source_image_path_1st.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image, text]}]
+            elif source_image_path_1st is None and source_image_path_2nd is not None and source_image_path_3rd is None:
+                image = ToPILImage()(source_image_path_2nd.permute([0,3,1,2])[0]).convert("RGB")
+                msgs = [{'role': 'user', 'content': [image, text]}]
+            elif source_image_path_1st is None and source_image_path_2nd is None and source_image_path_3rd is not None:
+                image = ToPILImage()(source_image_path_3rd.permute([0,3,1,2])[0]).convert("RGB")
                 msgs = [{'role': 'user', 'content': [image, text]}]
             else:
-                raise ValueError("Either image or source_video_path must be provided")
+                msgs = [{'role': 'user', 'content': [text]}]
+                # raise ValueError("Either image or video must be provided")
 
             params = {
                 "use_image_id": False,
