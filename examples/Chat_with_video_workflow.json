@@ -1,13 +1,50 @@
 {
-  "last_node_id": 50,
-  "last_link_id": 58,
+  "last_node_id": 51,
+  "last_link_id": 59,
   "nodes": [
+    {
+      "id": 50,
+      "type": "LoadVideo",
+      "pos": [
+        -497,
+        -163
+      ],
+      "size": {
+        "0": 458.2900390625,
+        "1": 396.434326171875
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            58
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00002.mp4",
+        "Video",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      ]
+    },
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -27,
-        -169
+        -28,
+        -162
       ],
       "size": {
         "0": 405.09295654296875,
@@ -16,7 +53,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "properties": {
         "text": ""
@@ -34,10 +71,10 @@
         -26,
         -13
       ],
-      "size": {
-        "0": 402.51531982421875,
-        "1": 251.21055603027344
-      },
+      "size": [
+        400.9615292940945,
+        244.58696885459332
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -70,7 +107,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            49
+            59
           ],
           "shape": 3,
           "slot_index": 0
@@ -88,15 +125,15 @@
       ]
     },
     {
-      "id": 6,
-      "type": "ACE_TextPreview",
+      "id": 51,
+      "type": "DisplayText",
       "pos": [
-        -497,
-        287
+        -494,
+        283
       ],
       "size": [
-        868.372078054409,
-        104.60983359342941
+        867.0883591897355,
+        126.68700711564873
       ],
       "flags": {},
       "order": 3,
@@ -105,7 +142,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 49,
+          "link": 59,
           "widget": {
             "name": "text"
           }
@@ -120,60 +157,15 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ACE_TextPreview"
+        "Node name for S&R": "DisplayText"
       },
       "widgets_values": [
         "",
-        "The video captures a serene sunset scene. The sun is partially obscured by the horizon, casting a warm orange glow across the sky. A flock of birds can be seen flying in the distance, silhouetted against the vibrant backdrop. To the right, there's a solitary tree with bare branches, standing tall and stark against the colorful sky. The silhouette of the tree adds a sense of tranquility to the scene. The overall atmosphere is peaceful, with the natural elements combining to create a picturesque moment."
-      ]
-    },
-    {
-      "id": 50,
-      "type": "LoadVideo",
-      "pos": [
-        -497,
-        -163
-      ],
-      "size": [
-        458.29004348543015,
-        396.43433044606405
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            58
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadVideo"
-      },
-      "widgets_values": [
-        "AnimateDiff_00002.mp4",
-        "Video",
-        {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
+        "The video captures a serene sunset scene where the sun is descending towards the horizon, casting a warm orange glow across the sky. A silhouette of a leafless tree stands prominently in the foreground on the right side, its branches stark against the vibrant backdrop. As the video progresses, a flock of birds can be seen flying from left to right, their dark silhouettes contrasting with the bright hues of the sunset. The birds' flight path suggests they are moving away from the setting sun, possibly heading toward a roost for the night. The overall atmosphere is tranquil and picturesque, highlighting the natural beauty of the moment as day transitions into evening."
       ]
     }
   ],
   "links": [
-    [
-      49,
-      46,
-      0,
-      6,
-      0,
-      "STRING"
-    ],
     [
       58,
       50,
@@ -181,16 +173,24 @@
       46,
       0,
       "VIDEO"
+    ],
+    [
+      59,
+      46,
+      0,
+      51,
+      0,
+      "STRING"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8769226950000011,
+      "scale": 0.9646149645000006,
       "offset": [
-        769.039496347093,
-        271.7842956277865
+        712.6131600082705,
+        249.4104205064398
       ]
     }
   },

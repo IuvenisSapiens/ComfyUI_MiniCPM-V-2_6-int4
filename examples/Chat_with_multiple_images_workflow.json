@@ -1,6 +1,6 @@
 {
-  "last_node_id": 47,
-  "last_link_id": 50,
+  "last_node_id": 48,
+  "last_link_id": 51,
   "nodes": [
     {
       "id": 45,
@@ -125,10 +125,10 @@
         -26,
         -186
       ],
-      "size": [
-        399.24604354256746,
-        109.79270042585773
-      ],
+      "size": {
+        "0": 399.24603271484375,
+        "1": 109.7927017211914
+      },
       "flags": {
         "collapsed": false
       },
@@ -185,7 +185,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            49
+            51
           ],
           "shape": 3,
           "slot_index": 0
@@ -203,15 +203,15 @@
       ]
     },
     {
-      "id": 6,
-      "type": "ACE_TextPreview",
+      "id": 48,
+      "type": "DisplayText",
       "pos": [
-        -21,
-        251
+        -28,
+        252
       ],
       "size": [
-        395.6283298148197,
-        216.01457065671195
+        403.54476908073264,
+        216.31416614136697
       ],
       "flags": {},
       "order": 5,
@@ -220,7 +220,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 49,
+          "link": 51,
           "widget": {
             "name": "text"
           }
@@ -235,11 +235,11 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ACE_TextPreview"
+        "Node name for S&R": "DisplayText"
       },
       "widgets_values": [
         "",
-        "Image 1 depicts the Earth as a standalone planet, while image 2 adds a small black satellite orbiting around it. In contrast, image 3 further enhances this by including a ring system around the Earth, resembling that of Saturn."
+        "In comparing the three images, image 1 shows a realistic depiction of Earth from space with no additional elements. Image 2 introduces a black sphere and a starry background, while still maintaining the realistic portrayal of Earth. Finally, image 3 adds a ring system to the Earth, enhancing its appearance in space."
       ]
     }
   ],
@@ -261,20 +261,20 @@
       "IMAGE"
     ],
     [
-      49,
-      46,
-      0,
-      6,
-      0,
-      "STRING"
-    ],
-    [
       50,
       47,
       0,
       46,
       3,
       "IMAGE"
+    ],
+    [
+      51,
+      46,
+      0,
+      48,
+      0,
+      "STRING"
     ]
   ],
   "groups": [],
@@ -283,8 +283,8 @@
     "ds": {
       "scale": 0.8769226950000005,
       "offset": [
-        895.6539167345032,
-        265.2723755243286
+        817.3319518773352,
+        249.45919179017005
       ]
     }
   },

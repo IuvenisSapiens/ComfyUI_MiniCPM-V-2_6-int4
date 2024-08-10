@@ -1,6 +1,6 @@
-import { app } from "../../../scripts/app.js";
-import { api } from '../../../scripts/api.js'
-import { ComfyWidgets } from "../../../scripts/widgets.js"
+import { app } from "/scripts/app.js";
+import { api } from '/scripts/api.js'
+import { ComfyWidgets } from "/scripts/widgets.js"
 
 function fitHeight(node) {
     node.setSize([node.size[0], node.computeSize([node.size[0], node.size[1]])[1]])
@@ -58,7 +58,6 @@ function previewVideo(node,file){
         fitHeight(this);
     });
     previewWidget.videoEl.addEventListener("error", () => {
-        //TODO: consider a way to properly notify the user why a preview isn't shown.
         previewWidget.parentEl.hidden = true;
         fitHeight(this);
     });

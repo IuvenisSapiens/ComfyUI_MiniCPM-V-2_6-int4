@@ -1,32 +1,7 @@
 {
-  "last_node_id": 51,
-  "last_link_id": 59,
+  "last_node_id": 53,
+  "last_link_id": 60,
   "nodes": [
-    {
-      "id": 7,
-      "type": "Note",
-      "pos": [
-        -28,
-        -175
-      ],
-      "size": {
-        "0": 405.09295654296875,
-        "1": 111.9568862915039
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 0,
-      "mode": 0,
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
     {
       "id": 51,
       "type": "LoadImage",
@@ -39,7 +14,7 @@
         "1": 400.7259216308594
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -66,51 +41,36 @@
       ]
     },
     {
-      "id": 6,
-      "type": "ACE_TextPreview",
+      "id": 7,
+      "type": "Note",
       "pos": [
-        -369,
-        288
+        -29,
+        -170
       ],
       "size": {
-        "0": 748.0654296875,
-        "1": 211.0476531982422
+        "0": 405.09295654296875,
+        "1": 111.9568862915039
       },
-      "flags": {},
-      "order": 3,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 49,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 6
-        }
-      ],
       "properties": {
-        "Node name for S&R": "ACE_TextPreview"
+        "text": ""
       },
       "widgets_values": [
-        "",
-        "The image showcases a stunning view of Earth from space, captured in high resolution. The planet is centrally positioned and appears to be illuminated by the sun's rays, which are visible on the right side of the frame. The Earth's surface is depicted with remarkable detail, revealing its diverse topography. Prominent landmasses such as North America, South America, Europe, Africa, Asia, Australia, and Antarctica are clearly visible.\n\nThe oceans surrounding these continents are shown in varying shades of blue, reflecting the vastness of our planet's water bodies. The atmosphere is rendered in white and gray tones, providing a stark contrast to the deep blues of the oceans and the greens and browns of the land. This color palette effectively highlights the natural beauty and complexity of Earth's ecosystems.\n\nThe perspective from space offers a unique vantage point, allowing us to appreciate the intricate patterns formed by the clouds that dot the sky. These cloud formations add an element of dynamism to the otherwise static depiction of the Earth.\n\nOverall, this image serves as a powerful reminder of our home planet's awe-inspiring scale and diversity. It underscores the importance of preserving and protecting our environment for future generations."
-      ]
+        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 46,
       "type": "MiniCPM_VQA",
       "pos": [
-        -25,
-        -8
+        -27,
+        -18
       ],
       "size": {
         "0": 402.51531982421875,
@@ -149,7 +109,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            49
+            60
           ],
           "shape": 3,
           "slot_index": 0
@@ -165,17 +125,50 @@
         64,
         2
       ]
+    },
+    {
+      "id": 52,
+      "type": "DisplayText",
+      "pos": [
+        -370,
+        283
+      ],
+      "size": [
+        744.8724248898037,
+        230.99961904465033
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 60,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText"
+      },
+      "widgets_values": [
+        "",
+        "The image presents a stunning view of Earth from space, showcasing the planet's diverse landscapes and the vastness of its oceans. The curvature of the Earth is clearly visible, emphasizing the planet's spherical shape against the backdrop of the cosmos. \n\nFrom this vantage point, we can see the intricate patterns created by clouds that blanket parts of the Earth's surface, adding texture to the otherwise smooth blue expanse of water and sky. These clouds are predominantly white, but they vary in shades, suggesting different altitudes and weather conditions.\n\nThe landmasses appear as patches of green, brown, and beige, indicating vegetation, deserts, and mountains respectively. These colors provide a stark contrast to the surrounding blue waters, highlighting the diversity of life on our planet.\n\nIn the top right corner of the image, there's a glimpse of the sun, casting a warm glow over the scene. Its presence serves as a reminder of the constant energy it provides to sustain life on Earth.\n\nOverall, the image captures the beauty and complexity of our home planet, offering a perspective that highlights both its unity and its diversity. It's a powerful reminder of the fragility and resilience of life on Earth, and the importance of preserving our natural world for future generations."
+      ]
     }
   ],
   "links": [
-    [
-      49,
-      46,
-      0,
-      6,
-      0,
-      "STRING"
-    ],
     [
       59,
       51,
@@ -183,6 +176,14 @@
       46,
       1,
       "IMAGE"
+    ],
+    [
+      60,
+      46,
+      0,
+      52,
+      0,
+      "STRING"
     ]
   ],
   "groups": [],
@@ -191,8 +192,8 @@
     "ds": {
       "scale": 0.8769226950000005,
       "offset": [
-        781.9476994712928,
-        227.4124283949481
+        719.5466271122827,
+        227.09311188424178
       ]
     }
   },
