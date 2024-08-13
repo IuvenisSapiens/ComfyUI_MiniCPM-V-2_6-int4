@@ -105,7 +105,7 @@ class MiniCPM_VQA:
                 model_checkpoint, trust_remote_code=True
             )
             self.model = AutoModel.from_pretrained(
-                model_checkpoint, trust_remote_code=True, torch_dtype=torch.bfloat16
+                model_checkpoint, trust_remote_code=True, attn_implementation='sdpa', torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16
             )
 
         with torch.no_grad():
