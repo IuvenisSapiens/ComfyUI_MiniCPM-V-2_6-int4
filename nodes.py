@@ -64,7 +64,17 @@ class MiniCPM_VQA:
             return [l[i] for i in idxs]
 
         vr = VideoReader(source_video_path, ctx=cpu(0))
-        sample_fps = round(vr.get_avg_fps() / 1)  # FPS
+        total_frames = len(vr) + 1
+        print("Total frames:", total_frames)
+        avg_fps = vr.get_avg_fps()
+        print("Get average FPS(frame per second):", avg_fps)
+        sample_fps = round(avg_fps / 1)  # FPS 
+        duration = len(vr) / avg_fps
+        print("Total duration:", duration, "seconds")
+        width = vr[0].shape[1] 
+        height = vr[0].shape[0] 
+        print("Video resolution(width x height):", width, "x", height)
+        
         frame_idx = [i for i in range(0, len(vr), sample_fps)]
         if len(frame_idx) > MAX_NUM_FRAMES:
             frame_idx = uniform_sample(frame_idx, MAX_NUM_FRAMES)
