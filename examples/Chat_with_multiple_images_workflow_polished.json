@@ -1,0 +1,375 @@
+{
+  "last_node_id": 59,
+  "last_link_id": 69,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "Note",
+      "pos": [
+        -986,
+        -453
+      ],
+      "size": [
+        717.5083887849671,
+        82.1026799697911
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 51,
+      "type": "DisplayText",
+      "pos": [
+        -706,
+        38
+      ],
+      "size": [
+        396.363305648757,
+        321.3814190780305
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 62,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText"
+      },
+      "widgets_values": [
+        "",
+        "The differences among the images are as follows: In image 1, the Earth is shown without any celestial bodies or other objects in space. In image 2, a distant planet appears on the left side of the Earth. Finally, in image 3, an orbiting ring system has been added around the Earth."
+      ]
+    },
+    {
+      "id": 53,
+      "type": "MiniCPM_VQA_Polished",
+      "pos": [
+        -707,
+        -306
+      ],
+      "size": {
+        "0": 400,
+        "1": 288
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video_path",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "source_image_path",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            62
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_VQA_Polished"
+      },
+      "widgets_values": [
+        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
+        "MiniCPM-V-2_6-int4",
+        0.8,
+        100,
+        0.7000000000000001,
+        1.05,
+        2048,
+        64,
+        2
+      ]
+    },
+    {
+      "id": 54,
+      "type": "MultipleImagesInput",
+      "pos": [
+        -986,
+        -136
+      ],
+      "size": {
+        "0": 210,
+        "1": 122
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 65
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 66
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            64,
+            69
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultipleImagesInput"
+      },
+      "widgets_values": [
+        3,
+        null
+      ]
+    },
+    {
+      "id": 55,
+      "type": "LoadImage",
+      "pos": [
+        -1232,
+        -453
+      ],
+      "size": [
+        210,
+        294.59575497225734
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65
+          ],
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00509_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 56,
+      "type": "LoadImage",
+      "pos": [
+        -1234,
+        -122
+      ],
+      "size": [
+        214.4383753701569,
+        307.4778289046691
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            66
+          ],
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00532_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "LoadImage",
+      "pos": [
+        -1232,
+        227
+      ],
+      "size": [
+        210,
+        300.3955181942589
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            68
+          ],
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00508_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "PreviewImage",
+      "pos": [
+        -247,
+        -450
+      ],
+      "size": [
+        321.89826603634924,
+        978.5138868615923
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      62,
+      53,
+      0,
+      51,
+      0,
+      "STRING"
+    ],
+    [
+      64,
+      54,
+      0,
+      53,
+      1,
+      "IMAGE"
+    ],
+    [
+      65,
+      55,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      56,
+      0,
+      54,
+      1,
+      "IMAGE"
+    ],
+    [
+      68,
+      58,
+      0,
+      54,
+      2,
+      "IMAGE"
+    ],
+    [
+      69,
+      54,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7247295000000008,
+      "offset": [
+        1591.77035311526,
+        510.87428555307997
+      ]
+    }
+  },
+  "version": 0.4
+}

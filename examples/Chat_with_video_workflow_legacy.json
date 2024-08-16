@@ -1,0 +1,201 @@
+{
+  "last_node_id": 52,
+  "last_link_id": 61,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "Note",
+      "pos": [
+        -458,
+        -282
+      ],
+      "size": [
+        724.4190635635425,
+        79.42505774181373
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 50,
+      "type": "LoadVideo",
+      "pos": [
+        -471,
+        -160
+      ],
+      "size": [
+        354.7996847834255,
+        328.8709801716195
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            60
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00002.mp4",
+        "Video",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "type": "DisplayText",
+      "pos": [
+        -470,
+        209
+      ],
+      "size": [
+        764.9123218825612,
+        138.49962782050295
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 61,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText"
+      },
+      "widgets_values": [
+        "",
+        "The video captures a serene sunset scene. The sky is painted with hues of deep orange, transitioning into darker shades as it stretches upwards. In the foreground, there's a solitary tree with no leaves, standing stark against the vibrant backdrop. As the sun descends towards the horizon, its light casts long shadows and creates a dramatic silhouette effect on the landscape.\n\nBirds are seen in flight, silhouetted against the bright sun, adding a sense of movement to the otherwise still scene. Their paths crisscross the sky, creating fleeting lines that enhance the dynamic nature of the moment. The overall atmosphere is one of tranquility and natural beauty, emphasizing the transient yet captivating moments found in nature."
+      ]
+    },
+    {
+      "id": 52,
+      "type": "MiniCPM_VQA",
+      "pos": [
+        -104,
+        -160
+      ],
+      "size": {
+        "0": 400,
+        "1": 328
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video_path",
+          "type": "VIDEO",
+          "link": 60
+        },
+        {
+          "name": "source_image_path_1st",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "source_image_path_2nd",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "source_image_path_3rd",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            61
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_VQA"
+      },
+      "widgets_values": [
+        "Describe the video in detail",
+        "MiniCPM-V-2_6-int4",
+        0.8,
+        100,
+        0.7,
+        1.05,
+        2048,
+        64,
+        2
+      ]
+    }
+  ],
+  "links": [
+    [
+      60,
+      50,
+      0,
+      52,
+      0,
+      "VIDEO"
+    ],
+    [
+      61,
+      52,
+      0,
+      51,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0610764609500007,
+      "offset": [
+        742.7446687640564,
+        340.5521374723906
+      ]
+    }
+  },
+  "version": 0.4
+}

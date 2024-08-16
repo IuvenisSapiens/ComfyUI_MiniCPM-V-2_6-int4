@@ -192,7 +192,7 @@ function videoUpload(node, inputName, inputData, app) {
 ComfyWidgets.VIDEOPLOAD = videoUpload;
 
 app.registerExtension({
-	name: "DiffSynth-Studio.UploadVideo",
+	name: "Comfyui_MiniCPM-V-2_6-int4.UploadVideo",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
 		if (nodeData?.name == "LoadVideo") {
 			nodeData.input.required.upload = ["VIDEOPLOAD"];

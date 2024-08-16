@@ -142,7 +142,7 @@ function previewVideo(node,file,type){
 }
 
 app.registerExtension({
-	name: "DiffSynth-Studio.VideoPreviewer",
+	name: "Comfyui_MiniCPM-V-2_6-int4.VideoPreviewer",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
 		if (nodeData?.name == "PreViewVideo") {
 			nodeType.prototype.onExecuted = function (data) {

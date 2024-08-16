@@ -7,12 +7,12 @@ output_dir = folder_paths.get_output_directory()
 class LoadVideo:
     @classmethod
     def INPUT_TYPES(s):
-        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f)) and f.split('.')[-1] in ["mp4", "webm","mkv","avi"]]
+        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f)) and f.split('.')[-1] in ["mp4", "mkv", "mov", "avi", "flv", "wmv", "webm", "m4v"]]
         return {"required":{
             "video":(files,),
         }}
     
-    CATEGORY = "MiniCPM-V"
+    CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"
     DESCRIPTION = "Load Video"
 
     RETURN_TYPES = ("VIDEO",)
@@ -32,7 +32,7 @@ class PreViewVideo:
             "video":("VIDEO",),
         }}
     
-    CATEGORY = "MiniCPM-V"
+    CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"
     DESCRIPTION = "Load Video"
 
     RETURN_TYPES = ()

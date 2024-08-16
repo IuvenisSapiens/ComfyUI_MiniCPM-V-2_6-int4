@@ -1,30 +1,94 @@
 {
-  "last_node_id": 48,
-  "last_link_id": 51,
+  "last_node_id": 49,
+  "last_link_id": 55,
   "nodes": [
     {
-      "id": 45,
+      "id": 7,
+      "type": "Note",
+      "pos": [
+        -28,
+        -188
+      ],
+      "size": {
+        "0": 399.24603271484375,
+        "1": 109.7927017211914
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 43,
       "type": "LoadImage",
       "pos": [
-        -710,
-        22
+        -361,
+        -193
       ],
       "size": {
         "0": 315,
         "1": 314
       },
       "flags": {},
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            48
+            52
           ],
-          "shape": 3,
-          "slot_index": 0
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00509_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "LoadImage",
+      "pos": [
+        -691,
+        15
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53
+          ],
+          "slot_index": 0,
+          "shape": 3
         },
         {
           "name": "MASK",
@@ -45,24 +109,25 @@
       "id": 47,
       "type": "LoadImage",
       "pos": [
-        -371,
-        159
+        -360,
+        161
       ],
       "size": {
         "0": 315,
         "1": 314
       },
       "flags": {},
-      "order": 1,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            50
+            54
           ],
-          "shape": 3
+          "shape": 3,
+          "slot_index": 0
         },
         {
           "name": "MASK",
@@ -80,138 +145,15 @@
       ]
     },
     {
-      "id": 43,
-      "type": "LoadImage",
-      "pos": [
-        -371,
-        -192
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            47
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00509_.png",
-        "image"
-      ]
-    },
-    {
-      "id": 7,
-      "type": "Note",
-      "pos": [
-        -26,
-        -186
-      ],
-      "size": {
-        "0": 399.24603271484375,
-        "1": 109.7927017211914
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 3,
-      "mode": 0,
-      "properties": {
-        "text": ""
-      },
-      "widgets_values": [
-        "当 MiniCPM VQA 同时接收到图像和视频信息时，它会仅处理视频信息而忽略图像信息。如果您想处理图像信息，请断开视频信息的输入。\n\nWhen MiniCPM VQA simultaneously receives both image and video information, it processes only the video information while ignoring the image information. If you want to process the image information, please disconnect the input of the video information."
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 46,
-      "type": "MiniCPM_VQA",
-      "pos": [
-        -25,
-        -27
-      ],
-      "size": {
-        "0": 400,
-        "1": 232
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source_video_path",
-          "type": "VIDEO",
-          "link": null
-        },
-        {
-          "name": "source_image_path_1st",
-          "type": "IMAGE",
-          "link": 47
-        },
-        {
-          "name": "source_image_path_2nd",
-          "type": "IMAGE",
-          "link": 48
-        },
-        {
-          "name": "source_image_path_3rd",
-          "type": "IMAGE",
-          "link": 50,
-          "slot_index": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            51
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniCPM_VQA"
-      },
-      "widgets_values": [
-        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
-        "MiniCPM-V-2_6-int4",
-        0.7000000000000001,
-        64,
-        2
-      ]
-    },
-    {
       "id": 48,
       "type": "DisplayText",
       "pos": [
-        -28,
-        252
+        -25,
+        343
       ],
       "size": [
-        403.54476908073264,
-        216.31416614136697
+        402.6263813985204,
+        128.96297412521199
       ],
       "flags": {},
       "order": 5,
@@ -220,7 +162,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 51,
+          "link": 55,
           "widget": {
             "name": "text"
           }
@@ -239,38 +181,100 @@
       },
       "widgets_values": [
         "",
-        "In comparing the three images, image 1 shows a realistic depiction of Earth from space with no additional elements. Image 2 introduces a black sphere and a starry background, while still maintaining the realistic portrayal of Earth. Finally, image 3 adds a ring system to the Earth, enhancing its appearance in space."
+        "Image 1 shows a view of Earth from space, highlighting the planet's surface and cloud formations. Image 2 adds a celestial body in orbit around Earth, while image 3 incorporates a ring system surrounding Earth, resembling that of Saturn."
+      ]
+    },
+    {
+      "id": 49,
+      "type": "MiniCPM_VQA",
+      "pos": [
+        -26,
+        -34
+      ],
+      "size": {
+        "0": 400,
+        "1": 328
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video_path",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "source_image_path_1st",
+          "type": "IMAGE",
+          "link": 52
+        },
+        {
+          "name": "source_image_path_2nd",
+          "type": "IMAGE",
+          "link": 53
+        },
+        {
+          "name": "source_image_path_3rd",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            55
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_VQA"
+      },
+      "widgets_values": [
+        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
+        "MiniCPM-V-2_6-int4",
+        0.8,
+        100,
+        0.7,
+        1.05,
+        2048,
+        64,
+        2
       ]
     }
   ],
   "links": [
     [
-      47,
+      52,
       43,
       0,
-      46,
+      49,
       1,
       "IMAGE"
     ],
     [
-      48,
+      53,
       45,
       0,
-      46,
+      49,
       2,
       "IMAGE"
     ],
     [
-      50,
+      54,
       47,
       0,
-      46,
+      49,
       3,
       "IMAGE"
     ],
     [
-      51,
-      46,
+      55,
+      49,
       0,
       48,
       0,
@@ -281,10 +285,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8769226950000005,
+      "scale": 1.0610764609500027,
       "offset": [
-        817.3319518773352,
-        249.45919179017005
+        860.1104098291208,
+        234.23813540891564
       ]
     }
   },

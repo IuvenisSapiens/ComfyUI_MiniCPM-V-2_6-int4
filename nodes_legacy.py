@@ -26,10 +26,34 @@ class MiniCPM_VQA:
             "required": {
                 "text": ("STRING", {"default": "", "multiline": True}),
                 "model": (["MiniCPM-V-2_6-int4"],),
+                "top_p": (
+                    "FLOAT",
+                    {
+                        "default": 0.8,
+                    },
+                ),
+                "top_k": (
+                    "INT",
+                    {
+                        "default": 100,
+                    },
+                ),
                 "temperature": (
                     "FLOAT",
                     {
                         "default": 0.7,
+                    },
+                ),
+                "repetition_penalty": (
+                    "FLOAT",
+                    {
+                        "default": 1.05,
+                    },
+                ),
+                "max_new_tokens": (
+                    "INT",
+                    {
+                        "default": 2048,
                     },
                 ),
                 "video_max_num_frames": (
@@ -55,7 +79,7 @@ class MiniCPM_VQA:
 
     RETURN_TYPES = ("STRING",)
     FUNCTION = "inference"
-    CATEGORY = "MiniCPM-V"
+    CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"
 
     def encode_video(self, source_video_path, MAX_NUM_FRAMES):
         def uniform_sample(l, n):  # noqa: E741
@@ -87,7 +111,11 @@ class MiniCPM_VQA:
         self,
         text,
         model,
+        top_p,
+        top_k,
         temperature,
+        repetition_penalty,
+        max_new_tokens,
         video_max_num_frames,
         video_max_slice_nums,
         source_image_path_1st=None,
@@ -211,7 +239,11 @@ class MiniCPM_VQA:
                 msgs=msgs,
                 tokenizer=self.tokenizer,
                 sampling=True,
+                top_k=top_k,
+                top_p=top_p,
                 temperature=temperature,
+                repetition_penalty=repetition_penalty,
+                max_new_tokens=max_new_tokens,
                 **params,
             )
             return (result,)

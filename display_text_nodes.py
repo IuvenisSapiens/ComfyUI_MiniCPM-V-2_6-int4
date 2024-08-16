@@ -12,7 +12,7 @@ class DisplayText:
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "display_text"
-    CATEGORY = "MiniCPM-V"
+    CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"
 
     def display_text(self, text):
         return {"ui": {"text": text}, "result": (text,)}
