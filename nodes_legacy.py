@@ -68,6 +68,7 @@ class MiniCPM_VQA:
                         "default": 2,
                     },
                 ),  # use 1 if cuda OOM and video resolution >  448*448
+                "seed": ("INT", {"default": -1}),  # add seed parameter, default is -1
             },
             "optional": {
                 "source_video_path": ("VIDEO",),
@@ -92,13 +93,13 @@ class MiniCPM_VQA:
         print("Total frames:", total_frames)
         avg_fps = vr.get_avg_fps()
         print("Get average FPS(frame per second):", avg_fps)
-        sample_fps = round(avg_fps / 1)  # FPS 
+        sample_fps = round(avg_fps / 1)  # FPS
         duration = len(vr) / avg_fps
         print("Total duration:", duration, "seconds")
-        width = vr[0].shape[1] 
-        height = vr[0].shape[0] 
+        width = vr[0].shape[1]
+        height = vr[0].shape[0]
         print("Video resolution(width x height):", width, "x", height)
-        
+
         frame_idx = [i for i in range(0, len(vr), sample_fps)]
         if len(frame_idx) > MAX_NUM_FRAMES:
             frame_idx = uniform_sample(frame_idx, MAX_NUM_FRAMES)
@@ -118,11 +119,14 @@ class MiniCPM_VQA:
         max_new_tokens,
         video_max_num_frames,
         video_max_slice_nums,
+        seed=-1,  # 添加种子参数
         source_image_path_1st=None,
         source_image_path_2nd=None,
         source_image_path_3rd=None,
         source_video_path=None,
     ):
+        if seed != -1:
+            torch.manual_seed(seed)
         model_id = f"openbmb/{model}"
         model_checkpoint = os.path.join(
             folder_paths.models_dir, "prompt_generator", os.path.basename(model_id)
@@ -143,7 +147,10 @@ class MiniCPM_VQA:
                 model_checkpoint, trust_remote_code=True
             )
             self.model = AutoModel.from_pretrained(
-                model_checkpoint, trust_remote_code=True, attn_implementation='sdpa', torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16
+                model_checkpoint,
+                trust_remote_code=True,
+                attn_implementation="sdpa",
+                torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16,
             )
 
         with torch.no_grad():
@@ -234,6 +241,10 @@ class MiniCPM_VQA:
 
             params = {"use_image_id": False, "max_slice_nums": video_max_slice_nums}
 
+            # offload model to CPU
+            # self.model = self.model.to(torch.device("cpu"))
+            # self.model.eval()
+
             result = self.model.chat(
                 image=None,
                 msgs=msgs,
@@ -246,4 +257,11 @@ class MiniCPM_VQA:
                 max_new_tokens=max_new_tokens,
                 **params,
             )
+
+            # offload model to GPU
+            # self.model = self.model.to(torch.device("cpu"))
+            # self.model.eval()
+            # release GPU memory
+            torch.cuda.empty_cache()
+
             return (result,)
