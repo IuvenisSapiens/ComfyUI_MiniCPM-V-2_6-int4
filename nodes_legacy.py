@@ -26,6 +26,7 @@ class MiniCPM_VQA:
             "required": {
                 "text": ("STRING", {"default": "", "multiline": True}),
                 "model": (["MiniCPM-V-2_6-int4"],),
+                "keep_model_loaded": ("BOOLEAN", {"default": False}),
                 "top_p": (
                     "FLOAT",
                     {
@@ -112,6 +113,7 @@ class MiniCPM_VQA:
         self,
         text,
         model,
+        keep_model_loaded,
         top_p,
         top_k,
         temperature,
@@ -119,7 +121,7 @@ class MiniCPM_VQA:
         max_new_tokens,
         video_max_num_frames,
         video_max_slice_nums,
-        seed=-1,  # 添加种子参数
+        seed=-1,  # add seed parameter, default is -1
         source_image_path_1st=None,
         source_image_path_2nd=None,
         source_image_path_3rd=None,
@@ -128,26 +130,27 @@ class MiniCPM_VQA:
         if seed != -1:
             torch.manual_seed(seed)
         model_id = f"openbmb/{model}"
-        model_checkpoint = os.path.join(
+        self.model_checkpoint = os.path.join(
             folder_paths.models_dir, "prompt_generator", os.path.basename(model_id)
         )
 
-        if not os.path.exists(model_checkpoint):
+        if not os.path.exists(self.model_checkpoint):
             from huggingface_hub import snapshot_download
 
             snapshot_download(
                 repo_id=model_id,
-                local_dir=model_checkpoint,
+                local_dir=self.model_checkpoint,
                 local_dir_use_symlinks=False,
             )
 
-        if self.model_checkpoint != model_checkpoint:
-            self.model_checkpoint = model_checkpoint
+        if self.tokenizer is None:
             self.tokenizer = AutoTokenizer.from_pretrained(
-                model_checkpoint, trust_remote_code=True
+                self.model_checkpoint,
+                trust_remote_code=True,
             )
+        if self.model is None:
             self.model = AutoModel.from_pretrained(
-                model_checkpoint,
+                self.model_checkpoint,
                 trust_remote_code=True,
                 attn_implementation="sdpa",
                 torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16,
@@ -261,7 +264,13 @@ class MiniCPM_VQA:
             # offload model to GPU
             # self.model = self.model.to(torch.device("cpu"))
             # self.model.eval()
-            # release GPU memory
-            torch.cuda.empty_cache()
+            
+            if not keep_model_loaded:
+                del self.tokenizer  # release tokenizer memory
+                del self.model  # release model memory
+                self.tokenizer = None  # set tokenizer to None
+                self.model = None  # set model to None
+                torch.cuda.empty_cache()  # release GPU memory
+                torch.cuda.ipc_collect()
 
             return (result,)

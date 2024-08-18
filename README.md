@@ -2,6 +2,22 @@
 
 This is an implementation of [MiniCPM-V-2_6-int4](https://github.com/OpenBMB/MiniCPM-V) by [ComfyUI](https://github.com/comfyanonymous/ComfyUI), including support for text-based queries, video queries, single-image queries, and multi-image queries to generate captions or responses.
 
+---
+
+## Recent Updates
+
+- Added `keep_model_loaded` parameter
+
+By default, this parameter is set to False, which indicates that the model will be unloaded from GPU memory after each prediction is made.
+
+However, if set to True, the model will remain loaded in GPU memory. This is particularly useful when multiple predictions with the same model are needed, eliminating the need to reload it between uses.
+
+- Added `seed` parameter
+
+This parameter enables the setting of a random seed for the purpose of ensuring reproducibility in results.
+
+---
+
 ## Basic Workflow
 
 - **Text-based Query**: Users can submit textual queries to request information or generate descriptions. For instance, a user might input a description like "What is the meaning of life?"
