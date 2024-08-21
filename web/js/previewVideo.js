@@ -144,7 +144,7 @@ function previewVideo(node,file,type){
 app.registerExtension({
 	name: "Comfyui_MiniCPM-V-2_6-int4.VideoPreviewer",
 	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeData?.name == "PreViewVideo") {
+		if (nodeData?.name == "PreviewVideo") {
 			nodeType.prototype.onExecuted = function (data) {
 				previewVideo(this, data.video[0], data.video[1]);
             }

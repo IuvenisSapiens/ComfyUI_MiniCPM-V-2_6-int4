@@ -1,22 +1,22 @@
 {
-  "last_node_id": 53,
-  "last_link_id": 63,
+  "last_node_id": 52,
+  "last_link_id": 55,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -405,
-        -283
+        390,
+        -254
       ],
       "size": [
-        778.5858451950286,
-        83.23187413831988
+        443.0672250364122,
+        104.75543052432553
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "properties": {
         "text": ""
@@ -28,15 +28,15 @@
       "bgcolor": "#653"
     },
     {
-      "id": 51,
+      "id": 49,
       "type": "DisplayText",
       "pos": [
-        -9,
-        -155
+        386,
+        -111
       ],
       "size": [
-        411.07182581821485,
-        287.43032344630575
+        452.45997097748295,
+        212.76987788146022
       ],
       "flags": {},
       "order": 2,
@@ -45,7 +45,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 62,
+          "link": 55,
           "widget": {
             "name": "text"
           }
@@ -64,22 +64,22 @@
       },
       "widgets_values": [
         "",
-        "A quantum group is a mathematical structure that generalizes the concept of a classical group. In classical mathematics, a group is a set of elements equipped with a binary operation (addition or multiplication) that satisfies certain properties such as associativity and existence of an identity element.\nIn contrast, a quantum group is a Hopf algebra over a commutative associative field K, where the algebraic structure is defined by two additional operations: comultiplication and counit. The comultiplication maps each element of the group to a pair of elements in the group, while the counit maps each element to a scalar in K. These operations are subject to compatibility conditions that ensure they satisfy certain properties similar to those of a classical group.\nQuantum groups have applications in various fields of mathematics and physics, including representation theory, mathematical physics, and the study of integrable systems. They also play a key role in the development of noncommutative geometry, which is a branch of mathematics that studies the geometric aspects of noncommutative algebras."
+        "A quantum group is a mathematical object that generalizes the concept of a group to include elements with quantum numbers. In traditional groups, each element has a unique identity and can be multiplied or divided by other elements in the group. However, in quantum groups, some elements may have multiple identities or may not be able to be multiplied or divided.\nQuantum groups are used in various areas of mathematics and physics, including representation theory, statistical mechanics, and quantum field theory. They are particularly important in the study of quantum systems, where they provide a way to describe the behavior of particles that follow quantum mechanical rules.\nOne example of a quantum group is the quantum group associated with the Lie algebra sl(2), which describes the symmetries of the hyperbolic plane. This group has several interesting properties, such as the fact that it contains both integer and non-integer elements, and that it is not commutative."
       ]
     },
     {
-      "id": 53,
+      "id": 52,
       "type": "MiniCPM_VQA_Polished",
       "pos": [
-        -424,
-        -155
+        -28,
+        -258
       ],
       "size": {
         "0": 400,
-        "1": 288
+        "1": 360
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [
         {
@@ -98,10 +98,10 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            62
+            55
           ],
-          "slot_index": 0,
-          "shape": 3
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
@@ -110,22 +110,25 @@
       "widgets_values": [
         "Quantum Group",
         "MiniCPM-V-2_6-int4",
+        true,
         0.8,
         100,
-        0.7000000000000001,
+        0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        2021,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      62,
-      53,
+      55,
+      52,
       0,
-      51,
+      49,
       0,
       "STRING"
     ]
@@ -134,10 +137,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.2839025177495016,
+      "scale": 1.4122927695244516,
       "offset": [
-        558.0218970351092,
-        355.66490056663275
+        151.62360770168286,
+        363.80059898448
       ]
     }
   },

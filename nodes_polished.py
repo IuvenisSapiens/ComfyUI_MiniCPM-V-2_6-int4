@@ -141,13 +141,16 @@ class MiniCPM_VQA_Polished:
 
         if self.tokenizer is None:
             self.tokenizer = AutoTokenizer.from_pretrained(
-                self.model_checkpoint, trust_remote_code=True
+                self.model_checkpoint,
+                trust_remote_code=True,
+                low_cpu_mem_usage=True,
             )
 
         if self.model is None:
             self.model = AutoModel.from_pretrained(
                 self.model_checkpoint,
                 trust_remote_code=True,
+                low_cpu_mem_usage=True,
                 attn_implementation="sdpa",
                 torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16,
             )
@@ -192,6 +195,6 @@ class MiniCPM_VQA_Polished:
                 self.tokenizer = None  # set tokenizer to None
                 self.model = None  # set model to None
                 torch.cuda.empty_cache()  # release GPU memory
-                torch.cuda.ipc_collect() 
+                torch.cuda.ipc_collect()
 
             return (result,)

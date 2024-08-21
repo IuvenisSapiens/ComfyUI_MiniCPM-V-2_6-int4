@@ -1,22 +1,22 @@
 {
-  "last_node_id": 50,
-  "last_link_id": 53,
+  "last_node_id": 51,
+  "last_link_id": 54,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        407,
-        -259
+        398,
+        -255
       ],
       "size": [
-        444.4772474819206,
-        105.1057548191149
+        560.1107513648193,
+        103.60144459895338
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "properties": {
         "text": ""
@@ -31,12 +31,12 @@
       "id": 49,
       "type": "DisplayText",
       "pos": [
-        398,
-        -116
+        395,
+        -115
       ],
       "size": [
-        469.47011944093106,
-        190.1452542076317
+        565.5332447212019,
+        259.1318214920463
       ],
       "flags": {},
       "order": 2,
@@ -45,7 +45,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 53,
+          "link": 54,
           "widget": {
             "name": "text"
           }
@@ -64,22 +64,22 @@
       },
       "widgets_values": [
         "",
-        "A quantum group is a mathematical structure that generalizes the concept of a classical group to include noncommutative elements. It is defined as a Hopf algebra over a field, which means it has both the structure of an algebra and a structure of a coalgebra, satisfying certain compatibility conditions.\nIn other words, a quantum group can be thought of as a set of operators or functions that satisfy certain algebraic properties, such as associativity and existence of inverses, but with additional features related to quantum mechanics, such as the possibility of measuring multiple quantities simultaneously or the uncertainty principle.\nQuantum groups have applications in various areas of mathematics and physics, including representation theory, statistical mechanics, and quantum field theory. They are also used in computer science for cryptography and information security."
+        "A quantum group is a mathematical object that generalizes the concept of a classical group to the realm of quantum mechanics. In classical mathematics, a group is a set of elements with a binary operation (such as addition or multiplication) that satisfies certain properties, such as associativity and the existence of an identity element.\nIn the context of quantum mechanics, a quantum group is a Hopf algebra that is associated with a classical group. The elements of a quantum group are represented by operators that satisfy the same algebraic rules as the elements of the corresponding classical group. However, the operators in a quantum group also have additional properties related to the uncertainty principle, which is a fundamental principle in quantum mechanics that states that it is impossible to precisely measure both the position and momentum of a particle at the same time.\nOne example of a quantum group is the quantum group associated with the special unitary group SU(2), which plays a central role in the study of quantum spin systems. Another example is the quantum group associated with the orthogonal group SO(3), which is used in the study of quantum mechanics of angular momentum.\nQuantum groups have many applications in physics and other areas of mathematics, including the study of quantum field theory, integrable systems, and knot theory. They are also important tools in the development of quantum computing, where they can be used to construct quantum algorithms for solving problems that are difficult or impossible to solve using classical computers."
       ]
     },
     {
-      "id": 50,
+      "id": 51,
       "type": "MiniCPM_VQA",
       "pos": [
-        -23,
+        -21,
         -256
       ],
       "size": {
         "0": 400,
-        "1": 328
+        "1": 400
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [
         {
@@ -108,7 +108,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            53
+            54
           ],
           "shape": 3,
           "slot_index": 0
@@ -120,20 +120,23 @@
       "widgets_values": [
         "Quantum Group",
         "MiniCPM-V-2_6-int4",
+        true,
         0.8,
         100,
         0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        1501,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      53,
-      50,
+      54,
+      51,
       0,
       49,
       0,
@@ -144,10 +147,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.5535220464768968,
+      "scale": 1.2839025177495011,
       "offset": [
-        98.04910910078037,
-        338.6861802582465
+        174.06698959850874,
+        351.1944051783393
       ]
     }
   },

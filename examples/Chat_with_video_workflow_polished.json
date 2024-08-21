@@ -1,13 +1,13 @@
 {
-  "last_node_id": 53,
-  "last_link_id": 63,
+  "last_node_id": 55,
+  "last_link_id": 66,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -423,
-        -279
+        -428,
+        -256
       ],
       "size": {
         "0": 724.4190673828125,
@@ -16,7 +16,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "properties": {
         "text": ""
@@ -28,54 +28,16 @@
       "bgcolor": "#653"
     },
     {
-      "id": 50,
-      "type": "LoadVideo",
-      "pos": [
-        -425,
-        -155
-      ],
-      "size": {
-        "0": 309.7669372558594,
-        "1": 290.6871643066406
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            63
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadVideo"
-      },
-      "widgets_values": [
-        "AnimateDiff_00002.mp4",
-        "Video",
-        {
-          "hidden": false,
-          "paused": false,
-          "params": {}
-        }
-      ]
-    },
-    {
       "id": 51,
       "type": "DisplayText",
       "pos": [
-        -420,
-        183
+        -471,
+        277
       ],
-      "size": {
-        "0": 719.67041015625,
-        "1": 145.14923095703125
-      },
+      "size": [
+        813.5119048309946,
+        141.5117891133587
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -83,7 +45,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 62,
+          "link": 65,
           "widget": {
             "name": "text"
           }
@@ -102,19 +64,19 @@
       },
       "widgets_values": [
         "",
-        "The video captures a serene sunset scene. The sun is depicted as a large, glowing orb near the horizon, casting an orange hue across the sky. A flock of birds is seen in flight, silhouetted against the bright backdrop, adding dynamism to the tranquil setting. To the right, a solitary tree stands with its branches bare, creating a stark contrast against the vibrant colors of the sunset. The silhouette effect emphasizes the shapes and outlines within the frame, highlighting the natural beauty of the moment without distraction from any potential movement or activity on the ground level."
+        "The video captures a serene sunset scene with the sun descending towards the horizon. The sky is painted in vibrant hues of orange, yellow, and red, creating a warm gradient that transitions from fiery tones near the setting sun to softer shades as it moves upward. Silhouetted against this colorful backdrop is a solitary tree, its bare branches reaching out into the sky, adding a stark contrast to the vivid colors. A flock of birds can be seen flying across the sky, their dark shapes moving dynamically through the air, contributing to the sense of movement within the otherwise tranquil setting. The overall atmosphere is one of peacefulness and natural beauty, emphasizing the fleeting yet mesmerizing moments of twilight."
       ]
     },
     {
-      "id": 53,
+      "id": 54,
       "type": "MiniCPM_VQA_Polished",
       "pos": [
-        -98,
-        -154
+        -57,
+        -129
       ],
       "size": {
         "0": 400,
-        "1": 288
+        "1": 360
       },
       "flags": {},
       "order": 2,
@@ -123,7 +85,7 @@
         {
           "name": "source_video_path",
           "type": "VIDEO",
-          "link": 63
+          "link": 66
         },
         {
           "name": "source_image_path",
@@ -136,10 +98,10 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            62
+            65
           ],
-          "slot_index": 0,
-          "shape": 3
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
@@ -148,30 +110,70 @@
       "widgets_values": [
         "Describe the video in detail",
         "MiniCPM-V-2_6-int4",
+        true,
         0.8,
         100,
-        0.7000000000000001,
+        0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        1746,
+        "randomize"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "LoadVideo",
+      "pos": [
+        -479,
+        -128
+      ],
+      "size": [
+        409.98541024642964,
+        358.0214538574219
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            66
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00002.mp4",
+        "Video",
+        {
+          "hidden": false,
+          "paused": false,
+          "params": {}
+        }
       ]
     }
   ],
   "links": [
     [
-      62,
-      53,
+      65,
+      54,
       0,
       51,
       0,
       "STRING"
     ],
     [
-      63,
-      50,
+      66,
+      55,
       0,
-      53,
+      54,
       0,
       "VIDEO"
     ]
@@ -180,10 +182,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.061076460950001,
+      "scale": 0.9646149645000013,
       "offset": [
-        720.03717101902,
-        355.8794928560021
+        829.9398344807752,
+        321.3710639555439
       ]
     }
   },

@@ -1,22 +1,22 @@
 {
-  "last_node_id": 54,
-  "last_link_id": 62,
+  "last_node_id": 55,
+  "last_link_id": 64,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -29,
-        -170
+        385,
+        -6
       ],
-      "size": {
-        "0": 405.09295654296875,
-        "1": 111.9568862915039
-      },
+      "size": [
+        681.1074433554127,
+        92.63203200215605
+      ],
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "properties": {
         "text": ""
@@ -31,22 +31,22 @@
       "id": 51,
       "type": "LoadImage",
       "pos": [
-        -450,
-        -166
+        -363,
+        -8
       ],
-      "size": {
-        "0": 403.862060546875,
-        "1": 479.716796875
-      },
+      "size": [
+        308.78882573073196,
+        398.59335191598814
+      ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            61
+            63
           ],
           "slot_index": 0,
           "shape": 3
@@ -70,12 +70,12 @@
       "id": 52,
       "type": "DisplayText",
       "pos": [
-        -452,
-        365
+        385,
+        128
       ],
       "size": [
-        827.0493676119427,
-        197.18177023960618
+        682.011017760673,
+        262.51556121728197
       ],
       "flags": {},
       "order": 3,
@@ -84,7 +84,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 62,
+          "link": 64,
           "widget": {
             "name": "text"
           }
@@ -104,19 +104,19 @@
       },
       "widgets_values": [
         "",
-        "The image presents a stunning view of Earth from space, showcasing the planet's curvature and its intricate blend of landmasses and oceans. The globe is positioned centrally in the frame, with the North American continent prominently displayed on the left side, extending towards Central America and parts of South America. The Atlantic Ocean stretches across the center, while the Pacific Ocean occupies the right side.\n\nThe Earth's surface is depicted in vivid colors, highlighting the green of the continents, the blue of the oceans, and the white of clouds. This color palette not only provides a realistic representation but also adds depth to the image, making it visually captivating.\n\nIn the background, a starry sky extends into the distance, adding an element of vastness and infinity to the scene. On the top right corner, there's a small celestial body that could be interpreted as a distant planet or moon, further enhancing the cosmic theme of the image.\n\nOverall, this image beautifully captures the awe-inspiring view of our home planet as seen from space, emphasizing both its natural beauty and its place within the larger universe."
+        "The image presents a captivating view of Earth, captured from space. The planet is beautifully illuminated by the sun's rays, casting a warm glow over its surface. The curvature of the Earth is clearly visible, emphasizing the vastness of our home planet.\n\nThe continents and oceans are distinctly outlined in shades of green and brown, respectively, providing a stark contrast against the deep blue of the surrounding space. This color palette not only highlights the natural beauty of our world but also underscores the delicate balance between land and water.\n\nThe atmosphere, depicted in hues of white and gray, appears as swirling clouds that blanket the planet. These clouds, reminiscent of cosmic dust storms, add a sense of dynamism to the otherwise serene scene.\n\nIn the backdrop, a distant star can be seen, serving as a reminder of the infinite universe beyond our own. Its presence adds depth to the image, creating a sense of scale and distance.\n\nOverall, the image provides a comprehensive view of Earth, showcasing its unique characteristics and placing it within the context of the cosmos. It's a testament to the awe-inspiring nature of our planet and the wonders of space exploration."
       ]
     },
     {
-      "id": 54,
+      "id": 55,
       "type": "MiniCPM_VQA",
       "pos": [
-        -27,
-        -16
+        -34,
+        -9
       ],
       "size": {
-        "0": 401.4997253417969,
-        "1": 328
+        "0": 400,
+        "1": 400
       },
       "flags": {},
       "order": 2,
@@ -130,7 +130,7 @@
         {
           "name": "source_image_path_1st",
           "type": "IMAGE",
-          "link": 61
+          "link": 63
         },
         {
           "name": "source_image_path_2nd",
@@ -148,10 +148,10 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            62
+            64
           ],
-          "slot_index": 0,
-          "shape": 3
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
@@ -160,28 +160,31 @@
       "widgets_values": [
         "Describe the image in detail",
         "MiniCPM-V-2_6-int4",
+        true,
         0.8,
         100,
         0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        171,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      61,
+      63,
       51,
       0,
-      54,
+      55,
       1,
       "IMAGE"
     ],
     [
-      62,
-      54,
+      64,
+      55,
       0,
       52,
       0,
@@ -192,10 +195,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9646149645000011,
+      "scale": 0.9646149645000015,
       "offset": [
-        705.6300407468901,
-        223.5352361859333
+        482.3653697740519,
+        191.776875012469
       ]
     }
   },

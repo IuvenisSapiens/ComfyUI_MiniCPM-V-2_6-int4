@@ -147,11 +147,13 @@ class MiniCPM_VQA:
             self.tokenizer = AutoTokenizer.from_pretrained(
                 self.model_checkpoint,
                 trust_remote_code=True,
+                low_cpu_mem_usage=True,
             )
         if self.model is None:
             self.model = AutoModel.from_pretrained(
                 self.model_checkpoint,
                 trust_remote_code=True,
+                low_cpu_mem_usage=True,
                 attn_implementation="sdpa",
                 torch_dtype=torch.bfloat16 if self.bf16_support else torch.float16,
             )

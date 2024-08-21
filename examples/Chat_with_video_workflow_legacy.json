@@ -1,18 +1,18 @@
 {
-  "last_node_id": 52,
-  "last_link_id": 61,
+  "last_node_id": 53,
+  "last_link_id": 63,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -458,
-        -282
+        -480,
+        -284
       ],
-      "size": [
-        724.4190635635425,
-        79.42505774181373
-      ],
+      "size": {
+        "0": 724.4190673828125,
+        "1": 79.42505645751953
+      },
       "flags": {
         "collapsed": false
       },
@@ -31,12 +31,12 @@
       "id": 50,
       "type": "LoadVideo",
       "pos": [
-        -471,
-        -160
+        -568,
+        -158
       ],
       "size": [
-        354.7996847834255,
-        328.8709801716195
+        469.4351950653901,
+        397.9642639160156
       ],
       "flags": {},
       "order": 1,
@@ -46,7 +46,7 @@
           "name": "VIDEO",
           "type": "VIDEO",
           "links": [
-            60
+            62
           ],
           "slot_index": 0,
           "shape": 3
@@ -69,12 +69,12 @@
       "id": 51,
       "type": "DisplayText",
       "pos": [
-        -470,
-        209
+        -558,
+        287
       ],
       "size": [
-        764.9123218825612,
-        138.49962782050295
+        861.4327343832845,
+        107.98898362105666
       ],
       "flags": {},
       "order": 3,
@@ -83,7 +83,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 61,
+          "link": 63,
           "widget": {
             "name": "text"
           }
@@ -102,19 +102,19 @@
       },
       "widgets_values": [
         "",
-        "The video captures a serene sunset scene. The sky is painted with hues of deep orange, transitioning into darker shades as it stretches upwards. In the foreground, there's a solitary tree with no leaves, standing stark against the vibrant backdrop. As the sun descends towards the horizon, its light casts long shadows and creates a dramatic silhouette effect on the landscape.\n\nBirds are seen in flight, silhouetted against the bright sun, adding a sense of movement to the otherwise still scene. Their paths crisscross the sky, creating fleeting lines that enhance the dynamic nature of the moment. The overall atmosphere is one of tranquility and natural beauty, emphasizing the transient yet captivating moments found in nature."
+        "The video captures a serene sunset scene. The sky is painted with warm hues of orange and red, creating a dramatic backdrop as the sun descends towards the horizon. Silhouetted against this vibrant sky is a solitary tree, its bare branches reaching upwards. A flock of birds can be seen in mid-flight, their dark silhouettes contrasting sharply against the glowing orb of the setting sun. The overall atmosphere is one of tranquility and natural beauty, as the day transitions into night."
       ]
     },
     {
-      "id": 52,
+      "id": 53,
       "type": "MiniCPM_VQA",
       "pos": [
-        -104,
-        -160
+        -89,
+        -159
       ],
       "size": {
         "0": 400,
-        "1": 328
+        "1": 400
       },
       "flags": {},
       "order": 2,
@@ -123,7 +123,7 @@
         {
           "name": "source_video_path",
           "type": "VIDEO",
-          "link": 60
+          "link": 62
         },
         {
           "name": "source_image_path_1st",
@@ -146,10 +146,10 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            61
+            63
           ],
-          "slot_index": 0,
-          "shape": 3
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
@@ -158,28 +158,31 @@
       "widgets_values": [
         "Describe the video in detail",
         "MiniCPM-V-2_6-int4",
+        false,
         0.8,
         100,
         0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        1617,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      60,
+      62,
       50,
       0,
-      52,
+      53,
       0,
       "VIDEO"
     ],
     [
-      61,
-      52,
+      63,
+      53,
       0,
       51,
       0,
@@ -190,10 +193,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0610764609500007,
+      "scale": 0.9646149645000006,
       "offset": [
-        742.7446687640564,
-        340.5521374723906
+        896.8108299009335,
+        348.18733398490764
       ]
     }
   },

@@ -25,7 +25,7 @@ class LoadVideo:
         video_path = os.path.join(input_dir,video)
         return (video_path,)
 
-class PreViewVideo:
+class PreviewVideo:
     @classmethod
     def INPUT_TYPES(s):
         return {"required":{

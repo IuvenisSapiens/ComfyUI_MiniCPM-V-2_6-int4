@@ -1,22 +1,22 @@
 {
-  "last_node_id": 49,
-  "last_link_id": 55,
+  "last_node_id": 50,
+  "last_link_id": 59,
   "nodes": [
     {
       "id": 7,
       "type": "Note",
       "pos": [
-        -28,
-        -188
+        415,
+        -78
       ],
-      "size": {
-        "0": 399.24603271484375,
-        "1": 109.7927017211914
-      },
+      "size": [
+        436.56812016891763,
+        108.88176616327235
+      ],
       "flags": {
         "collapsed": false
       },
-      "order": 0,
+      "order": 3,
       "mode": 0,
       "properties": {
         "text": ""
@@ -39,14 +39,14 @@
         "1": 314
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            52
+            56
           ],
           "slot_index": 0,
           "shape": 3
@@ -78,14 +78,14 @@
         "1": 314
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            53
+            57
           ],
           "slot_index": 0,
           "shape": 3
@@ -117,17 +117,17 @@
         "1": 314
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            54
+            58
           ],
-          "shape": 3,
-          "slot_index": 0
+          "slot_index": 0,
+          "shape": 3
         },
         {
           "name": "MASK",
@@ -148,12 +148,12 @@
       "id": 48,
       "type": "DisplayText",
       "pos": [
-        -25,
-        343
+        411,
+        79
       ],
       "size": [
-        402.6263813985204,
-        128.96297412521199
+        451.1885182898909,
+        265.19896846818176
       ],
       "flags": {},
       "order": 5,
@@ -162,7 +162,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 55,
+          "link": 59,
           "widget": {
             "name": "text"
           }
@@ -181,19 +181,19 @@
       },
       "widgets_values": [
         "",
-        "Image 1 shows a view of Earth from space, highlighting the planet's surface and cloud formations. Image 2 adds a celestial body in orbit around Earth, while image 3 incorporates a ring system surrounding Earth, resembling that of Saturn."
+        "In the provided images, there are several differences to note:\n\n1. **Image 1**: This image shows Earth as seen from space, with a focus on the Western Hemisphere (North America and South America). The background is dark space with visible stars.\n\n2. **Image 2**: In this second image, the Earth appears in the center of the frame, surrounded by a starry backdrop with a galaxy-like structure visible in the upper right corner. There is also a smaller celestial body, possibly an asteroid or moon, near the Earth's left side.\n\n3. **Image 3**: The third image depicts Earth with its rings, resembling Saturn's rings, surrounding it. The background remains dark space, similar to Image 1, but the inclusion of the rings adds a distinct astronomical element.\n\nThe primary differences lie in the depiction of celestial bodies around Earth and the complexity of the cosmic environment."
       ]
     },
     {
-      "id": 49,
+      "id": 50,
       "type": "MiniCPM_VQA",
       "pos": [
-        -26,
-        -34
+        -13,
+        -65
       ],
       "size": {
         "0": 400,
-        "1": 328
+        "1": 400
       },
       "flags": {},
       "order": 4,
@@ -207,17 +207,17 @@
         {
           "name": "source_image_path_1st",
           "type": "IMAGE",
-          "link": 52
+          "link": 56
         },
         {
           "name": "source_image_path_2nd",
           "type": "IMAGE",
-          "link": 53
+          "link": 57
         },
         {
           "name": "source_image_path_3rd",
           "type": "IMAGE",
-          "link": 54
+          "link": 58
         }
       ],
       "outputs": [
@@ -225,7 +225,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            55
+            59
           ],
           "shape": 3,
           "slot_index": 0
@@ -237,44 +237,47 @@
       "widgets_values": [
         "Compare image 1，image 2 and image 3, tell me about the differences among them.",
         "MiniCPM-V-2_6-int4",
+        true,
         0.8,
         100,
         0.7,
         1.05,
         2048,
         64,
-        2
+        2,
+        576,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      52,
+      56,
       43,
       0,
-      49,
+      50,
       1,
       "IMAGE"
     ],
     [
-      53,
+      57,
       45,
       0,
-      49,
+      50,
       2,
       "IMAGE"
     ],
     [
-      54,
+      58,
       47,
       0,
-      49,
+      50,
       3,
       "IMAGE"
     ],
     [
-      55,
-      49,
+      59,
+      50,
       0,
       48,
       0,
@@ -285,10 +288,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0610764609500027,
+      "scale": 0.8769226950000022,
       "offset": [
-        860.1104098291208,
-        234.23813540891564
+        840.512281646217,
+        279.18423579817517
       ]
     }
   },

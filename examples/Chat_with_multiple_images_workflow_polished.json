@@ -1,6 +1,6 @@
 {
-  "last_node_id": 59,
-  "last_link_id": 69,
+  "last_node_id": 60,
+  "last_link_id": 71,
   "nodes": [
     {
       "id": 7,
@@ -9,10 +9,10 @@
         -986,
         -453
       ],
-      "size": [
-        717.5083887849671,
-        82.1026799697911
-      ],
+      "size": {
+        "0": 717.5083618164062,
+        "1": 82.10267639160156
+      },
       "flags": {
         "collapsed": false
       },
@@ -31,13 +31,13 @@
       "id": 51,
       "type": "DisplayText",
       "pos": [
-        -706,
-        38
+        -697,
+        183
       ],
-      "size": [
-        396.363305648757,
-        321.3814190780305
-      ],
+      "size": {
+        "0": 396.3633117675781,
+        "1": 321.38140869140625
+      },
       "flags": {},
       "order": 7,
       "mode": 0,
@@ -45,7 +45,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 62,
+          "link": 71,
           "widget": {
             "name": "text"
           }
@@ -64,59 +64,7 @@
       },
       "widgets_values": [
         "",
-        "The differences among the images are as follows: In image 1, the Earth is shown without any celestial bodies or other objects in space. In image 2, a distant planet appears on the left side of the Earth. Finally, in image 3, an orbiting ring system has been added around the Earth."
-      ]
-    },
-    {
-      "id": 53,
-      "type": "MiniCPM_VQA_Polished",
-      "pos": [
-        -707,
-        -306
-      ],
-      "size": {
-        "0": 400,
-        "1": 288
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "source_video_path",
-          "type": "VIDEO",
-          "link": null
-        },
-        {
-          "name": "source_image_path",
-          "type": "IMAGE",
-          "link": 64
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            62
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MiniCPM_VQA_Polished"
-      },
-      "widgets_values": [
-        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
-        "MiniCPM-V-2_6-int4",
-        0.8,
-        100,
-        0.7000000000000001,
-        1.05,
-        2048,
-        64,
-        2
+        "In comparing image 1, image 2 and image 3, the differences are as follows: In image 1, Earth is shown in isolation with no other celestial bodies present. In image 2, a moon has been added to the scene, positioned to the left of Earth. Finally, in image 3, Saturn's rings have been added around Earth, creating a dramatic visual effect against the backdrop of space."
       ]
     },
     {
@@ -155,11 +103,11 @@
           "name": "images",
           "type": "IMAGE",
           "links": [
-            64,
-            69
+            69,
+            70
           ],
-          "shape": 3,
-          "slot_index": 0
+          "slot_index": 0,
+          "shape": 3
         }
       ],
       "properties": {
@@ -179,7 +127,7 @@
       ],
       "size": [
         210,
-        294.59575497225734
+        314
       ],
       "flags": {},
       "order": 1,
@@ -216,8 +164,8 @@
         -122
       ],
       "size": [
-        214.4383753701569,
-        307.4778289046691
+        214.43836975097656,
+        314
       ],
       "flags": {},
       "order": 2,
@@ -255,7 +203,7 @@
       ],
       "size": [
         210,
-        300.3955181942589
+        314
       ],
       "flags": {},
       "order": 3,
@@ -291,12 +239,12 @@
         -247,
         -450
       ],
-      "size": [
-        321.89826603634924,
-        978.5138868615923
-      ],
+      "size": {
+        "0": 321.89825439453125,
+        "1": 978.513916015625
+      },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -308,25 +256,64 @@
       "properties": {
         "Node name for S&R": "PreviewImage"
       }
+    },
+    {
+      "id": 60,
+      "type": "MiniCPM_VQA_Polished",
+      "pos": [
+        -697,
+        -241
+      ],
+      "size": {
+        "0": 400,
+        "1": 360
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_video_path",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "source_image_path",
+          "type": "IMAGE",
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_VQA_Polished"
+      },
+      "widgets_values": [
+        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
+        "MiniCPM-V-2_6-int4",
+        true,
+        0.8,
+        100,
+        0.7,
+        1.05,
+        2048,
+        64,
+        2,
+        1293,
+        "randomize"
+      ]
     }
   ],
   "links": [
-    [
-      62,
-      53,
-      0,
-      51,
-      0,
-      "STRING"
-    ],
-    [
-      64,
-      54,
-      0,
-      53,
-      1,
-      "IMAGE"
-    ],
     [
       65,
       55,
@@ -358,16 +345,32 @@
       59,
       0,
       "IMAGE"
+    ],
+    [
+      70,
+      54,
+      0,
+      60,
+      1,
+      "IMAGE"
+    ],
+    [
+      71,
+      60,
+      0,
+      51,
+      0,
+      "STRING"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7247295000000008,
+      "scale": 0.7247295000000027,
       "offset": [
-        1591.77035311526,
-        510.87428555307997
+        1602.4864516115556,
+        507.1347555005483
       ]
     }
   },
