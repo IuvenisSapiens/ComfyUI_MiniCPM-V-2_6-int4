@@ -117,7 +117,7 @@ class MiniCPM_VQA_Polished:
         max_new_tokens,
         video_max_num_frames,
         video_max_slice_nums,
-        seed=-1,  # add seed parameter, default is -1
+        seed,
         source_image_path=None,
         source_video_path=None,
     ):
