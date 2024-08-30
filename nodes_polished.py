@@ -41,9 +41,7 @@ class MiniCPM_VQA_Polished:
                 ),
                 "temperature": (
                     "FLOAT",
-                    {
-                        "default": 0.7,
-                    },
+                    {"default": 0.7, "min": 0, "max": 1, "step": 0.1},
                 ),
                 "repetition_penalty": (
                     "FLOAT",
