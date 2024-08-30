@@ -72,7 +72,7 @@ class MiniCPM_VQA:
                 "seed": ("INT", {"default": -1}),  # add seed parameter, default is -1
             },
             "optional": {
-                "source_video_path": ("VIDEO",),
+                "source_video_path": ("PATH",),
                 "source_image_path_1st": ("IMAGE",),
                 "source_image_path_2nd": ("IMAGE",),
                 "source_image_path_3rd": ("IMAGE",),

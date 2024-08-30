@@ -15,7 +15,7 @@ class LoadVideo:
     CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"
     DESCRIPTION = "Load Video"
 
-    RETURN_TYPES = ("VIDEO",)
+    RETURN_TYPES = ("PATH",)
 
     OUTPUT_NODE = False
 
@@ -29,7 +29,7 @@ class PreviewVideo:
     @classmethod
     def INPUT_TYPES(s):
         return {"required":{
-            "video":("VIDEO",),
+            "video":("PATH",),
         }}
     
     CATEGORY = "Comfyui_MiniCPM-V-2_6-int4"

@@ -84,7 +84,7 @@
       "inputs": [
         {
           "name": "source_video_path",
-          "type": "VIDEO",
+          "type": "PATH",
           "link": 66
         },
         {
@@ -138,8 +138,8 @@
       "mode": 0,
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
+          "name": "PATH",
+          "type": "PATH",
           "links": [
             66
           ],
@@ -175,7 +175,7 @@
       0,
       54,
       0,
-      "VIDEO"
+      "PATH"
     ]
   ],
   "groups": [],

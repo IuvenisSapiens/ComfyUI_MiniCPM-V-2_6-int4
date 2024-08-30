@@ -72,7 +72,7 @@ class MiniCPM_VQA_Polished:
                 "seed": ("INT", {"default": -1}),  # add seed parameter, default is -1
             },
             "optional": {
-                "source_video_path": ("VIDEO",),
+                "source_video_path": ("PATH",),
                 "source_image_path": ("IMAGE",),
             },
         }
