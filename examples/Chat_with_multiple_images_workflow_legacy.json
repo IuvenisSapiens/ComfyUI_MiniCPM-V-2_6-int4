@@ -235,7 +235,7 @@
         "Node name for S&R": "MiniCPM_VQA"
       },
       "widgets_values": [
-        "Compare image 1，image 2 and image 3, tell me about the differences among them.",
+        "Compare image 1, image 2 and image 3, tell me about the differences among them.",
         "MiniCPM-V-2_6-int4",
         true,
         0.8,
