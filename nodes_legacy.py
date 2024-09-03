@@ -25,7 +25,10 @@ class MiniCPM_VQA:
         return {
             "required": {
                 "text": ("STRING", {"default": "", "multiline": True}),
-                "model": (["MiniCPM-V-2_6-int4"],),
+                "model": (
+                    ["MiniCPM-V-2_6-int4", "MiniCPM-Llama3-V-2_5-int4"],
+                    {"default": "MiniCPM-V-2_6-int4"},
+                ),
                 "keep_model_loaded": ("BOOLEAN", {"default": False}),
                 "top_p": (
                     "FLOAT",
@@ -264,7 +267,7 @@ class MiniCPM_VQA:
             # offload model to GPU
             # self.model = self.model.to(torch.device("cpu"))
             # self.model.eval()
-            
+
             if not keep_model_loaded:
                 del self.tokenizer  # release tokenizer memory
                 del self.model  # release model memory

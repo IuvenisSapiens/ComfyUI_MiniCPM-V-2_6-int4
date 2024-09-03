@@ -25,7 +25,10 @@ class MiniCPM_VQA_Polished:
         return {
             "required": {
                 "text": ("STRING", {"default": "", "multiline": True}),
-                "model": (["MiniCPM-V-2_6-int4"],),
+                "model": (
+                    ["MiniCPM-V-2_6-int4", "MiniCPM-Llama3-V-2_5-int4"],
+                    {"default": "MiniCPM-V-2_6-int4"},
+                ),
                 "keep_model_loaded": ("BOOLEAN", {"default": False}),
                 "top_p": (
                     "FLOAT",
