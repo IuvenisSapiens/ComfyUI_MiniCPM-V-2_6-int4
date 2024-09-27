@@ -1,0 +1,223 @@
+{
+  "last_node_id": 59,
+  "last_link_id": 68,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "Note",
+      "pos": {
+        "0": -428,
+        "1": -256
+      },
+      "size": {
+        "0": 724.4190673828125,
+        "1": 79.42505645751953
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "MiniCPM Chat提供了一个简化的类ChatGpt的功能，可以用它作为一个翻译节点，至于其它妙用，有待用户挖掘，注意，它并没有多轮会话机制 \n\nMiniCPM Chat offers a simplified ChatGpt-like functionality, which can be used as a translation node. As for other clever uses, they await discovery by users. Note that it does not have a multi-turn conversation mechanism."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 57,
+      "type": "DisplayText",
+      "pos": {
+        "0": 38,
+        "1": -120
+      },
+      "size": [
+        351.5555329134006,
+        130.9498158153525
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 67,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText"
+      },
+      "widgets_values": [
+        "",
+        "MiniCPM Chat offers a simplified class of ChatGPT functionality that can be used as a translation node. As for other cool uses, it's up to the user to discover them. Note that it does not have a multi-turn conversation mechanism."
+      ]
+    },
+    {
+      "id": 56,
+      "type": "MiniCPM_Chat",
+      "pos": {
+        "0": -425,
+        "1": -121
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            67
+          ],
+          "shape": 3,
+          "label": "STRING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_Chat"
+      },
+      "widgets_values": [
+        "Translate the following text using English.\n\nMiniCPM Chat提供了一个简化的类ChatGpt的功能，可以用它作为一个翻译节点，至于其它妙用，有待用户挖掘，注意，它并没有多轮会话机制 ",
+        "MiniCPM-V-2_6-int4",
+        true,
+        1113,
+        "randomize",
+        true
+      ]
+    },
+    {
+      "id": 58,
+      "type": "MiniCPM_Chat",
+      "pos": {
+        "0": -419,
+        "1": 156
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "label": "STRING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniCPM_Chat"
+      },
+      "widgets_values": [
+        "Translate the following text using English.\n\n长发东亚美女，酷炫装扮，室内灯光，柔和光线，温暖氛围，黑色丝袜，高跟鞋，全身照，超写实风格，丰富细节，细腻质感，广角镜头，自然光，高分辨率，优雅姿态，迷人眼神，穿着衣服。",
+        "MiniCPM-V-2_6-int4",
+        true,
+        1361,
+        "randomize",
+        true
+      ]
+    },
+    {
+      "id": 59,
+      "type": "DisplayText",
+      "pos": {
+        "0": 44,
+        "1": 156
+      },
+      "size": [
+        346.3554596712131,
+        139.74987227287204
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 68,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DisplayText"
+      },
+      "widgets_values": [
+        "",
+        "Long-haired East Asian beauty, cool outfit, indoor lighting, soft light, warm atmosphere, black stockings, high heels, full-body shot, hyper-realistic style, rich details, delicate texture, wide-angle lens, natural light, high resolution, elegant pose, captivating gaze, wearing clothes."
+      ]
+    }
+  ],
+  "links": [
+    [
+      67,
+      56,
+      0,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      68,
+      58,
+      0,
+      59,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        628.8446135709744,
+        292.05012314949124
+      ]
+    }
+  },
+  "version": 0.4
+}
