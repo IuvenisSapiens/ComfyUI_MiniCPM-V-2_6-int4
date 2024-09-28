@@ -1,4 +1,5 @@
 from .nodes_legacy import MiniCPM_VQA
+from .nodes_chat import MiniCPM_Chat
 from .nodes_polished import MiniCPM_VQA_Polished
 from .image_nodes import MultipleImagesInput
 from .util_nodes import LoadVideo,PreviewVideo
@@ -13,6 +14,7 @@ NODE_CLASS_MAPPINGS = {
     "MiniCPM_VQA": MiniCPM_VQA,
     "MiniCPM_VQA_Polished": MiniCPM_VQA_Polished,
     "DisplayText": DisplayText,
+    "MiniCPM_Chat": MiniCPM_Chat,
 }
 
 # A dictionary that contains the friendly/humanly readable titles for the nodes
@@ -23,4 +25,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MiniCPM_VQA": "MiniCPM VQA",
     "MiniCPM_VQA_Polished": "MiniCPM VQA Polished",
     "DisplayText": "Display Text",
+    "MiniCPM_Chat": "MiniCPM Chat",
 }

@@ -48,6 +48,11 @@ This parameter enables the setting of a random seed for the purpose of ensuring 
 > <span style="color: green;">Chat_with_multiple_images_workflow_polished preview</span>
 > ![Chat_with_multiple_images_workflow_polished preview](examples/Chat_with_multiple_images_workflow_polished.png)
 
+- **ChatGpt-like Query**: Users can submit a query and wait for the results to return. For example, using it as a translation node, as shown below:
+
+> <span style="color: green;">ChatGpt-like_workflow preview</span>
+> ![ChatGpt-like_workflow preview](examples/ChatGpt-like_workflow.png)
+
 ## Installation
 
 - Install from [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager) (search for `minicpm`)
