@@ -114,4 +114,4 @@ class MiniCPM_Chat:
                 torch.cuda.empty_cache()  # release GPU memory
                 torch.cuda.ipc_collect()
 
-            return (result,)
+            return {"ui": {"text": (result,)}, "result": (result,)}
