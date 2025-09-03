@@ -26,7 +26,7 @@ class MiniCPM_VQA:
             "required": {
                 "text": ("STRING", {"default": "", "multiline": True}),
                 "model": (
-                    ["MiniCPM-V-4_5-int4", "MiniCPM-V-4_5"],
+                    ["MiniCPM-V-4_5-int4", "MiniCPM-V-4_5", "MiniCPM-V-4-int4", "MiniCPM-V-4"],
                     {"default": "MiniCPM-V-4_5-int4"},
                 ),
                 "keep_model_loaded": ("BOOLEAN", {"default": False}),
